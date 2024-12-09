@@ -1,0 +1,12 @@
+.hero{
+    background-image: url('../../assets/FiNIT_bg.avif');
+}
+
+@keyframes beat {
+    from{
+     scale: 1;
+    }
+    to{
+     scale: 1.07;
+    }
+  }
