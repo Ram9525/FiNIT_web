@@ -85,7 +85,7 @@ function Hero() {
           </div>
 
           <p className="text-white text-[24px] md:text-[36px] lg:text-[48px] leading-tight font-bold mt-6 mb-4">
-            <span className="finance text-teal-400">The Finance Society</span>
+            <span className="finance" style={{color:"#58f5c2"}}>The Finance Society</span>
             <br />
             at <br />
             NIT{' '}
@@ -94,7 +94,7 @@ function Hero() {
           </p>
 
           <span className="h1 text-white text-[18px] md:text-[22px] lg:text-[26px] font-bold inline-block">
-            where innovation meets <span className="highlight text-purple-400">financial literacy</span>.
+            where innovation meets <span className="highlight" style={{color:"#874cff"}}>financial literacy</span>.
           </span>
         </div>
 

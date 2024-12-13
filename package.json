@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "flowbite-react": "^0.10.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
