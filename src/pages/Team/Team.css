@@ -1,9 +1,125 @@
-.team-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .team-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
+body {
+  background-color: black;
+}
+
+.team-container {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
+.team-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #C084FC;
+  font-weight: 700;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  width: 220px;
+  height: 321px;
+  background: #f9f9f9;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+  opacity: 0; 
+  transform: translateY(100px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px rgba(206, 178, 252, 0.48);
+}
+
+.card:hover .overlay {
+  transform: scale(4) translateZ(0);
+}
+
+.card:hover .circle {
+  border-color: #f0e7ff;
+  background: #ceb2fc;
+}
+
+.card:hover .circle:after {
+  background: #f0e7ff;
+}
+
+.card:hover .team-name {
+  color: white;
+}
+
+.circle {
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #ceb2fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.circle:after {
+  content: "";
+  width: 118px;
+  height: 118px;
+  display: block;
+  position: absolute;
+  background: #ceb2fc;
+  border-radius: 50%;
+  top: 7px;
+  left: 7px;
+  transition: opacity 0.3s ease-out;
+}
+
+.overlay {
+  width: 118px;
+  position: absolute;
+  height: 118px;
+  border-radius: 50%;
+  background: #ceb2fc;
+  top: 70px;
+  left: 50px;
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+}
+
+.team-photo {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.team-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+  color: #4c5656;
+  transition: color 0.3s ease-out;
+}
+
+.team-position {
+  font-size: 1rem;
+  color: #666;
+}
