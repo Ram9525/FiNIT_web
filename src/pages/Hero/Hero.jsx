@@ -70,35 +70,35 @@
         <>
         <div className='absolute bg-black opacity-80 z-10 inset-0'></div>
         <div className='hero relative bg-cover bg-center bg-fixed h-screen flex flex-col lg:flex-row justify-around lg:justify-between items-center px-6 md:px-10 lg:px-16 py-8'>
-        <div class="hero-content relative z-10 text-center lg:text-left">
-            <div id="hero-title-1" class="sm:text-center lg:text-left">
-            <h1 class="text-white font-bold"> 
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">F</span>
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">i</span>
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">N</span>
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">I</span>
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">T</span>
+        <div className="hero-content relative z-10 text-center lg:text-left">
+            <div id="hero-title-1" className="sm:text-center lg:text-left">
+            <h1 className="text-white font-bold"> 
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">F</span>
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">i</span>
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">N</span>
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">I</span>
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px] inline-block">T</span>
             </h1>
             </div>
-            <div id="hero-title-2" class="hidden sm:text-center lg:text-left">
+            <div id="hero-title-2" className="hidden sm:text-center lg:text-left">
             <h1 class="text-white font-bold">
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px]">₣</span>
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px]">1</span>
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px]">₦</span>
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px]">1</span>
-                <span class="name text-[50px] md:text-[70px] lg:text-[90px]">₮</span>
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px]">₣</span>
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px]">1</span>
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px]">₦</span>
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px]">1</span>
+                <span className="name text-[50px] md:text-[70px] lg:text-[90px]">₮</span>
             </h1>
             </div>
-            <p class="text-white text-[24px] md:text-[36px] lg:text-[48px] leading-[1.2] font-bold mt-6 md:mt-10 lg:mt-12 mb-4">
-            <span class="finance text-teal-500">The Finance Society</span><br />at <br />NIT <SiBitcoinsv className='inline text-yellow-500 text-5.5xl'/>hopal
+            <p className="text-white text-[24px] md:text-[36px] lg:text-[48px] leading-[1.2] font-bold mt-6 md:mt-10 lg:mt-12 mb-4">
+            <span className="finance text-teal-500">The Finance Society</span><br />at <br />NIT <SiBitcoinsv className='inline text-yellow-500 text-5.5xl'/>hopal
             </p>
-            <span class="h1 text-white text-[18px] md:text-[22px] lg:text-[26px] font-bold inline-block">
-            where innovation meets <span class="highlight text-[#9b51e0]">financial literacy</span>.
+            <span className="h1 text-white text-[18px] md:text-[22px] lg:text-[26px] font-bold inline-block">
+            where innovation meets <span className="highlight text-[#9b51e0]">financial literacy</span>.
             </span>
         </div>
 
-        <div class="hero-image relative z-10 lg:mt-0 magnet">
-            <img class="w-[250px] md:w-[400px] lg:w-[500px] animate-[beat_5s_ease-in-out_0.2s_infinite_alternate]"
+        <div className="hero-image relative z-10 lg:mt-0 magnet">
+            <img className="w-[250px] md:w-[400px] lg:w-[500px] animate-[beat_5s_ease-in-out_0.2s_infinite_alternate]"
             src={Hero_img} alt="Hero Image"/>
         </div>
             

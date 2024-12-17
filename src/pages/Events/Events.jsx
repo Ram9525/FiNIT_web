@@ -3,31 +3,41 @@ import './Events.css';
 import { HiArrowSmRight, HiArrowSmLeft } from "react-icons/hi";
 
 const Event = () => {
-
     useEffect(() => {
         const next = document.querySelector('.next');
         const prev = document.querySelector('.prev');
-        
+
+        let isThrottled = false;
+
+        const throttle = (func, delay) => {
+            if (isThrottled) return;
+            isThrottled = true;
+            func();
+            setTimeout(() => {
+                isThrottled = false;
+            }, delay);
+        };
+
         const handleNext = () => {
             const items = document.querySelectorAll('.item');
             document.querySelector('.slide').appendChild(items[0]);
         };
-        
+
         const handlePrev = () => {
             const items = document.querySelectorAll('.item');
             document.querySelector('.slide').prepend(items[items.length - 1]);
         };
-        
-        // Attach event listeners
-        next.addEventListener('click', handleNext);
-        prev.addEventListener('click', handlePrev);
+
+        // Attach throttled event listeners
+        next.addEventListener('click', () => throttle(handleNext, 500));
+        prev.addEventListener('click', () => throttle(handlePrev, 500));
 
         // Cleanup event listeners on component unmount
         return () => {
-            next.removeEventListener('click', handleNext);
-            prev.removeEventListener('click', handlePrev);
+            next.removeEventListener('click', () => throttle(handleNext, 500));
+            prev.removeEventListener('click', () => throttle(handlePrev, 500));
         };
-    }, []); // Empty dependency array ensures this runs only once after the initial render
+    }, []); 
 
     return (
         <>

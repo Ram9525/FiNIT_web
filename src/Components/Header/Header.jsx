@@ -7,7 +7,7 @@ function Header() {
   return (
     <>
       <header className="fixed z-50 top-4 w-full lg:px-12">
-            <nav className=" shadow bg-transparent rounded-2xl border-gray-200 px-4 lg:px-6 py-2.5">
+            <nav className="shadow bg-transparent rounded-2xl border-gray-200 px-4 lg:px-6 py-2.5 bg-black">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
                         <img
