@@ -21,6 +21,7 @@ const About = () => {
   }, []);
 
   return (
+    <div className="container-about shadow-xl">
     <div className="about-container">
       <h1 ref={headingRef} className="about-heading">ABOUT US</h1>
       
@@ -60,6 +61,7 @@ const About = () => {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 };

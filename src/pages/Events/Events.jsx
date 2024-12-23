@@ -1,99 +1,57 @@
-import React, { useEffect } from 'react';
-import './Events.css';
-import { HiArrowSmRight, HiArrowSmLeft } from "react-icons/hi";
+import React, { useRef, useEffect } from 'react';
+import Card from '../../Components/Card/Card';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const Event = () => {
+gsap.registerPlugin(ScrollTrigger);
 
-    useEffect(() => {
-        const next = document.querySelector('.next');
-        const prev = document.querySelector('.prev');
-        
-        const handleNext = () => {
-            const items = document.querySelectorAll('.item');
-            document.querySelector('.slide').appendChild(items[0]);
-        };
-        
-        const handlePrev = () => {
-            const items = document.querySelectorAll('.item');
-            document.querySelector('.slide').prepend(items[items.length - 1]);
-        };
-        
-        // Attach event listeners
-        next.addEventListener('click', handleNext);
-        prev.addEventListener('click', handlePrev);
+const Events = () => {
+  const eventCards = [
+    { id: 1, title: 'Hackathon', poweredBy: 'TechSoc' },
+    { id: 2, title: 'Finance Summit', poweredBy: 'FiNIT' },
+    { id: 3, title: 'Art Exhibition', poweredBy: 'ArtClub' },
+    { id: 4, title: 'Music Fest', poweredBy: 'MusicSoc' },
+  ];
+  
+  const cardRefs = useRef([]);
 
-        // Cleanup event listeners on component unmount
-        return () => {
-            next.removeEventListener('click', handleNext);
-            prev.removeEventListener('click', handlePrev);
-        };
-    }, []); // Empty dependency array ensures this runs only once after the initial render
-
-    return (
-        <>
-            <section>
-                <div className="flex flex-col items-center overflow-hidden py-20 bg-black">
-                    <h2 className="text-center text-green-400 text-4xl font-bold mb-6">EVENTS</h2>
-                    <div className="flex items-center justify-center w-full mb-10">
-                        <hr className="w-1/3 border-t border-gray-300" />
-                        <span className="mx-4 text-gray-500">***</span>
-                        <hr className="w-1/3 border-t border-gray-300" />
-                    </div>
-                    <div className="container-box">
-                        <div className="slide">
-                            <div className="item">
-                                <div className="content">
-                                    <div className="name">Switzerland</div>
-                                    <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                                    <button>See More</button>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <div className="content">
-                                    <div className="name">Finland</div>
-                                    <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                                    <button>See More</button>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <div className="content">
-                                    <div className="name">Iceland</div>
-                                    <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                                    <button>See More</button>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <div className="content">
-                                    <div className="name">Australia</div>
-                                    <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                                    <button>See More</button>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <div className="content">
-                                    <div className="name">Netherlands</div>
-                                    <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                                    <button>See More</button>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <div className="content">
-                                    <div className="name">Ireland</div>
-                                    <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                                    <button>See More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="button">
-                            <button className="prev font-extrabold text-white text-4xl"><HiArrowSmLeft /></button>
-                            <button className="next font-extrabold text-white text-4xl"><HiArrowSmRight /></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
+  useGSAP(()=>{
+    const tl = gsap.timeline(
+      {
+        scrollTrigger: {
+            trigger: '.cont',
+            start: 'top top',
+            end: 'bottom',
+            scrub: 3,
+            pin: true,
+            // markers: true,
+            // pinSpacing:false
+            
+        }
+    }
     );
+
+    tl.from(cardRefs.current[0], { xPercent: -100, opacity: 0,  ease: 'power2.out' })
+      .from(cardRefs.current[1], { xPercent: -100, opacity: 0,  ease: 'power2.out' })
+      .from(cardRefs.current[2], { yPercent: 100, opacity: 0,  ease: 'power2.out' })
+      .from(cardRefs.current[3], { yPercent: -100, opacity: 0, ease: 'power2.out' });
+  })
+
+  return (
+    <div className="max-w-7xl mx-auto py-28 px-4 sm:px-6 lg:px-8 cont overflow-hidden">
+      <h2 className="text-5xl font-bold text-center mb-36 text-teal-500">
+        Upcoming Events
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
+        {eventCards.map((event, index) => (
+          <div key={event.id} ref={(el) => (cardRefs.current[index] = el)}>
+            <Card title={event.title} poweredBy={event.poweredBy} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default Event;
+export default Events;
