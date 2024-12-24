@@ -29,7 +29,7 @@ const About = () => {
       <div ref={(el) => (sectionRefs.current[0] = el)} className="about-section">
         <div className="about-image">
           <img
-            src="https://via.placeholder.com/300"
+            src="https://plus.unsplash.com/premium_photo-1681488240099-f1f8585ef3e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8"
             alt="About Us"
           />
         </div>
@@ -44,8 +44,14 @@ const About = () => {
         </div>
       </div>
 
-      {/* Second Section - Text on Left, Image on Right */}
-      <div ref={(el) => (sectionRefs.current[1] = el)} className="about-section reverse">
+      {/* Second Section */}
+      <div ref={(el) => (sectionRefs.current[1] = el)} className="about-section">
+      <div className="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1730829807443-c314c7bd4495?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D"
+            alt="About Us"
+          />
+        </div>
         <div className="about-text">
           <p>
             We believe in the power of teamwork and thrive on challenges that
@@ -54,12 +60,7 @@ const About = () => {
             project at a time. Join us in this exciting adventure!
           </p>
         </div>
-        <div className="about-image">
-          <img
-            src="https://via.placeholder.com/300"
-            alt="About Us"
-          />
-        </div>
+        
       </div>
     </div>
     </div>

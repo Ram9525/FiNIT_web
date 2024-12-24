@@ -60,8 +60,9 @@ function Hero() {
 
   return (
     <>
+      <div className="relative">
       <div className="absolute bg-black opacity-80 z-10 inset-0 min-h-screen"></div>
-      <div className="hero relative bg-cover bg-fixed min-h-screen flex flex-col lg:flex-row justify-center lg:justify-between items-center px-6 md:px-10 lg:px-16 py-8">
+      <div className="hero relative bg-cover bg-fixed min-h-screen flex flex-col lg:flex-row justify-center lg:justify-between items-center px-6 md:px-10 lg:px-16 py-20 lg:py-8">
         {/* Hero Content */}
         <div className="hero-content relative z-10 text-center lg:text-left max-w-lg lg:max-w-xl">
           <div id="hero-title-1" className="sm:text-center lg:text-left mb-6">
@@ -84,7 +85,7 @@ function Hero() {
             </h1>
           </div>
 
-          <p className="text-white text-[24px] md:text-[36px] lg:text-[48px] leading-tight font-bold mt-6 mb-4">
+          <p className="text-white text-[24px] md:text-[26px] lg:text-[48px] leading-tight font-bold mt-6 mb-4">
             <span className="finance" style={{color:"#58f5c2"}}>The Finance Society</span>
             <br />
             at <br />
@@ -101,11 +102,12 @@ function Hero() {
         {/* Hero Image */}
         <div className="hero-image relative z-10 mt-8 lg:mt-0 magnet">
           <img
-            className="w-[250px] md:w-[400px] lg:w-[500px] animate-[beat_5s_ease-in-out_0.2s_infinite_alternate]"
+            className="w-[250px] md:w-[350px] lg:w-[500px] animate-[beat_5s_ease-in-out_0.2s_infinite_alternate]"
             src={Hero_img}
             alt="Hero"
           />
         </div>
+      </div>
       </div>
     </>
   );

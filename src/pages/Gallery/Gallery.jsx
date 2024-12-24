@@ -8,8 +8,8 @@ import img3 from '../../assets/Gallery_3.jpg'
 
 function CarouselGames() {
     return (
-                <section className='bg-black p-4 px-20 h-screen flex flex-col justify-start gap-36'>
-                    <div className='text-center text-white lg:text-6xl font-bold'>
+                <section className='bg-black p-4 px-20 flex flex-col justify-start gap-36'>
+                    <div className='text-center text-white text-4xl lg:text-6xl font-bold'>
                         <h1 className='mb-10'>Gallery</h1>
                         <h2>Glimpse: Wealth of Wizard 2K24</h2>
                     </div>

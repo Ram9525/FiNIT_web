@@ -105,3 +105,29 @@
     transition: transform 0.3s ease-in-out;
   }
   
+
+  @media screen and (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .about-image,
+    .about-text {
+      width: 100%;
+    }
+  
+    .about-image {
+      margin-bottom: 20px;
+      flex: unset;
+      height: 500px;
+      
+    }
+  }
+
+  @media screen and (max-width: 640px){
+    .about-image {
+      height: 300px;
+      
+    }
+  }
