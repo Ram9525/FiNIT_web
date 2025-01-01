@@ -1,73 +1,70 @@
-/* From Uiverse.io by AyuuLima */ 
+/* From Uiverse.io by AyuuLima */
 .EventCard {
-    position: relative;
-    width: 190px;
-    height: 254px;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 12px;
-    gap: 12px;
-    border-radius: 15px;
-    cursor: pointer;
-    color: #000000;
-  }
-  
-  .EventCard::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    left: -5px;
-    margin: auto;
-    width: 200px;
-    height: 264px;
-    border-radius: 15px;
-    background: linear-gradient(-45deg, #1cc2ff 0%, #ff261b 100%);
-    z-index: -10;
-    pointer-events: none;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .EventCard::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(-45deg, #1cffa4 0%, #ff01aee6 100%);
-    transform: translate3d(0, 0, 0) scale(0.95);
-    filter: blur(40px);
-  }
-  
-  .heading {
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 800;
-  }
-  
-  .EventCard p:not(.heading) {
-    font-size: 20px;
-    color: #000000;
-  }
-  
-  .EventCard p:not::after {
-    font-size: 0px;
-    color: #ffffff;
-  }
-  
-  .EventCard p:last-child {
-    color: #ffffff;
-  }
-  
-  .EventCard:hover::after {
-    filter: blur(50px);
-  }
-  
-  .EventCard:hover::before {
-    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
-  }
-  
-  .EventCard:hover {
-    transform: scale(1);
-  }
-  
+  position: relative;
+  width: 300px; /* Increased width */
+  height: 400px; /* Increased height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px; /* Increased padding */
+  gap: 16px; /* Increased gap */
+  border-radius: 20px; /* Slightly larger border radius */
+  cursor: pointer;
+  color: #000000;
+}
+
+.EventCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -8px; /* Adjusted for larger size */
+  margin: auto;
+  width: 320px; /* Increased width proportionally */
+  height: 420px; /* Increased height proportionally */
+  border-radius: 20px;
+  background: linear-gradient(-45deg, #1cc2ff 0%, #ff261b 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.EventCard::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #1cffa4 0%, #ff01aee6 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+}
+
+.heading {
+  font-size: 28px; /* Larger heading */
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.EventCard p:not(.heading) {
+  font-size: 24px; /* Larger text size */
+  color: #000000;
+}
+
+.EventCard p:not::after {
+  font-size: 0px;
+  color: #ffffff;
+}
+
+.EventCard p:last-child {
+  color: #ffffff;
+}
+
+.EventCard:hover::after {
+  filter: blur(60px); /* Increased blur effect */
+}
+
+.EventCard:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+
+.EventCard:hover {
+  transform: scale(1);
+}
