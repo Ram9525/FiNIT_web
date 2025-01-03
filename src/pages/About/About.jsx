@@ -9,14 +9,15 @@ const About = () => {
   useGSAP(() => {
     gsap.from(headingRef.current, {
       opacity: 0,
-      x: -50,
+      x: -500,
+      delay:.5,
       duration: 1,
       ease: "power3.out",
       scrollTrigger: {
         trigger: headingRef.current,
         start: "top 80%",  // Trigger when 80% of the heading is visible
-        toggleActions:"restart none none reverse",
-        markers: true,
+        toggleActions:"restart reverse play reverse",
+        // markers: true,
       },
     });
 
@@ -24,14 +25,15 @@ const About = () => {
     sectionRefs.current.forEach((section, index) => {
       gsap.from(section, {
         opacity: 0,
-        x: 50,
+        x: 500,
+        delay:.5,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: section,
           start: "top 80%",  // Trigger when 80% of the section is visible
-          toggleActions:"restart none none reverse",
-          markers: true,
+          toggleActions:"restart reverse restart reverse",
+          // markers: true,
         },
       });
     });
@@ -39,7 +41,7 @@ const About = () => {
 
   return (
     <div className="container-about shadow-xl">
-    <div className="about-container">
+    <div className="about-container overflow-x-hidden">
       <h1 ref={headingRef} className="about-heading">ABOUT US</h1>
       
       {/* First Section */}
