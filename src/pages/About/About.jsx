@@ -1,23 +1,40 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./About.css";
+import { useGSAP } from "@gsap/react";
 
 const About = () => {
   const headingRef = useRef(null);
   const sectionRefs = useRef([]);
+  useGSAP(() => {
+    gsap.from(headingRef.current, {
+      opacity: 0,
+      x: -50,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: headingRef.current,
+        start: "top 80%",  // Trigger when 80% of the heading is visible
+        toggleActions:"restart none none reverse",
+        markers: true,
+      },
+    });
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      headingRef.current,
-      { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 1 }
-    );
-    gsap.fromTo(
-      sectionRefs.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, stagger: 0.3, duration: 1, ease: "power2.out" }
-    );
+    // Section animations (triggered when in view)
+    sectionRefs.current.forEach((section, index) => {
+      gsap.from(section, {
+        opacity: 0,
+        x: 50,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",  // Trigger when 80% of the section is visible
+          toggleActions:"restart none none reverse",
+          markers: true,
+        },
+      });
+    });
   }, []);
 
   return (
