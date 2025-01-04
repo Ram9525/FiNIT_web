@@ -24,7 +24,7 @@
 .card {
   width: 220px;
   height: 321px;
-  background: #f9f9f9;
+  background: #00FFCC;
   border-top-right-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -52,6 +52,7 @@
 .card:hover .circle {
   border-color: #f0e7ff;
   background: #ceb2fc;
+  scale: 1.4;
 }
 
 .card:hover .circle:after {

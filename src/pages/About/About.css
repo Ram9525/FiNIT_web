@@ -1,23 +1,26 @@
+.about-subheading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00ffcc;
+  letter-spacing: .15rem;
+}
 .container-about { 
   width: 100%;
-  background: 
-    /* Diagonal slices */
+  /* background: 
     radial-gradient(
       circle at 100% 50%,
       #ff00cc 0% 2%,
       #00ffcc 3% 5%,
       transparent 6%
     ),
-    /* Offset dots */
     radial-gradient(
       circle at 0% 50%,
       #ff00cc 0% 2%,
       #00ffcc 3% 5%,
       transparent 6%
     ),
-    /* Wave-like pattern */
     radial-gradient(ellipse at 50% 0%, #3300ff 0% 3%, transparent 4%) 10px 10px,
-    /* Scattered elements */
     radial-gradient(
       circle at 50% 50%,
       #00ffcc 0% 1%,
@@ -26,13 +29,12 @@
       transparent 6%
     )
     20px 20px,
-    /* Background texture */
     repeating-linear-gradient(
       45deg,
-      #000, /* Changed to black */
-      #000 10px, /* Changed to black */
-      #000 10px, /* Changed to black */
-      #000 20px /* Changed to black */
+      #000,
+      #000 10px,
+      #000 10px,
+      #000 20px
     );
   background-size:
     50px 50px,
@@ -41,7 +43,8 @@
     60px 60px,
     100% 100%;
   animation: shift 15s linear infinite;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-image: url('../../assets/bimg.jpg');
 }
 
 @keyframes shift {
@@ -63,101 +66,97 @@
   }
 }
 
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
 
-  .about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
-  }
-  
-  .about-heading {
-    text-align: center;
-    font-size: 3rem;
-    margin-top: 30px;
-    color: #C084FC;
-    font-weight: 700;
-  }
-  
+.about-heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 30px;
+  color: #C084FC;
+  font-weight: 700;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  height: 300px;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse; 
+}
+
+.about-image,
+.about-text {
+  height: 100%;
+}
+
+.about-image {
+  flex: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.about-text {
+  flex: 70%;
+  padding: 20px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  background-color: rgba(0, 0, 0, 0.627);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-text p {
+  margin-left: 20px;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
   .about-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    height: 300px;
+    flex-direction: column;
+    height: auto;
   }
-  
-  .about-section.reverse {
-    flex-direction: row-reverse; 
-  }
-  
+
   .about-image,
   .about-text {
-    height: 100%;
-  }
-  
-  .about-image {
-    flex: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .about-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
-  }
-  
-  .about-text {
-    flex: 70%;
-    padding: 20px;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    background-color: rgba(0, 0, 0, 0.627);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  }
-  
-  .about-text p {
-    margin: 0;
-  }
-  
-  .about-image img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-
-  @media screen and (max-width: 768px) {
-    .about-section {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .about-image,
-    .about-text {
-      width: 100%;
-    }
-  
-    .about-image {
-      margin-bottom: 20px;
-      flex: unset;
-      height: 500px;
-      
-    }
   }
 
-  @media screen and (max-width: 640px){
-    .about-image {
-      height: 300px;
-      
-    }
+  .about-image {
+    margin-bottom: 20px;
+    flex: unset;
+    height: 500px;
   }
+}
+
+@media screen and (max-width: 640px){
+  .about-image {
+    height: 300px;
+  }
+}

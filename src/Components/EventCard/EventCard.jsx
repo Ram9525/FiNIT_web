@@ -8,7 +8,7 @@ const EventCard = ({ id, title, poweredBy, image, description }) => {
   const dispatch = useDispatch();
 
   return (
-    <div
+    <div 
       className={`EventCard relative w-72 h-96 rounded-2xl overflow-hidden transition-transform duration-500 ease-in-out ${hover ? 'scale-105' : 'scale-100'}`}
       style={{
         backgroundImage: `url(${image})`,

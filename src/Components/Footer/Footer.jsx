@@ -8,9 +8,9 @@ import logo from '../../assets/FiNIT_Logo.jpg';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-teal-500 to-purple-600 text-white py-12">
+    <footer className="bg-gradient-to-r from-black to-purple-700 text-white py-12">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div style={{fontFamily:'fh2'}} className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Website Logo and Social Media */}
           <div className="flex flex-col items-start">
@@ -49,7 +49,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2">
               <li>Ram Kumar: <a href="tel:+1234567890" className="hover:text-teal-300">+91 12345 67890</a></li>
-              <li>Fowler: <a href="tel:+9876543210" className="hover:text-teal-300">+91 98765 43210</a></li>
+              <li>Harish Kushwaha: <a href="tel:+9876543210" className="hover:text-teal-300">+91 98765 43210</a></li>
             </ul>
           </div>
 

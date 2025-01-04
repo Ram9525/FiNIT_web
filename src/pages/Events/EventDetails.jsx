@@ -27,10 +27,10 @@ const EventDetails = () => {
         alt={selectedEvent.title} 
         className="w-full h-96 object-cover mb-6 rounded-lg shadow-md"
       />
-      <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-violet-500 mb-4 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <h1 style={{fontFamily:'fh1'}} className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-violet-500 mb-4 hover:scale-105 transition-transform duration-300 ease-in-out">
         {selectedEvent.title}
       </h1>
-      <p className="text-lg text-gray-700 mb-4">
+      <p style={{fontFamily:'fh2'}} className="text-lg text-gray-700 mb-4">
         {selectedEvent.description}
       </p>
       <p className="text-sm text-gray-500 italic">Powered by: 
