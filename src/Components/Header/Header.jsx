@@ -100,7 +100,10 @@ function Header() {
                         isActive ? 'text-teal-300' : 'text-white'
                       } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-purple-600 lg:p-0`
                     }
-                    onClick={toggleMenu}
+                    onClick={() => {
+                      toggleMenu();
+                      window.scrollTo(0, 0);
+                    }}
                     
                   >
                     {label}

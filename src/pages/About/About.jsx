@@ -6,6 +6,7 @@ import ab_img1 from "../../assets/manitTomb.jpg";
 import ab_img2 from "../../assets/about2.jpg";
 
 const About = () => {
+  
   const headingRef = useRef(null);
   const sectionRefs = useRef([]);
   useGSAP(() => {
