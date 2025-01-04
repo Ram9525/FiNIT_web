@@ -1,21 +1,14 @@
 import React, { useRef, useEffect } from 'react';
-import Card from '../../Components/Card/Card';
+import EventCard from '../../Components/EventCard/EventCard';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import img1 from '../../assets/Gallery_1.jpg'
 import './Events.css'
-
 gsap.registerPlugin(ScrollTrigger);
+import { EventData } from '../../Features/EventSlice';
 
 const Events = () => {
-  const eventCards = [
-    { id: 1, title: 'Hackathon', poweredBy: 'TechSoc', image: img1 },
-    { id: 2, title: 'Finance Summit', poweredBy: 'FiNIT' , image: img1 },
-    { id: 3, title: 'Art Exhibition', poweredBy: 'ArtClub' , image: img1},
-    { id: 4, title: 'Music Fest', poweredBy: 'MusicSoc' , image: img1},
-  ];
-  
+
   const cardRefs = useRef([]);
 
   useGSAP(()=>{
@@ -47,9 +40,9 @@ const Events = () => {
         Upcoming Events
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 gap-y-20 place-items-center">
-        {eventCards.map((event, index) => (
+        {EventData.map((event, index) => (
           <div key={event.id} ref={(el) => (cardRefs.current[index] = el)}>
-            <Card title={event.title} poweredBy={event.poweredBy} image={event.image}/>
+            <EventCard id={event.id} title={event.title} poweredBy={event.poweredBy} image={event.image} description={event.description}/>
           </div>
         ))}
       </div>
