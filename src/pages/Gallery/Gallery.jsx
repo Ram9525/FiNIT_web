@@ -8,47 +8,47 @@ import img3 from '../../assets/Gallery_3.jpg';
 
 function CarouselGames() {
     return (
-        <section className='bg-black p-4 px-4 lg:px-20 flex flex-col justify-start gap-36'>
+        <section className='bg-black py-4 px-4 lg:px-20 flex flex-col justify-start gap-12'>
             <div className='text-center text-white text-4xl lg:text-6xl font-bold'>
-                <h1 className='mb-10'>Gallery</h1>
-                <h2>Glimpse: Wealth of Wizard 2K24</h2>
+                <h1 className='mb-10 text-[#C084FC]'>Gallery</h1>
+                <h2 className='text-[#C084FC]'>Glimpse: Wealth of Wizard 2K24</h2>
             </div>
             <Splide
                 options={{
-                    type: "loop", // Loop back to the beginning when reaching the end
+                    type: "loop",
                     autoScroll: {
-                        pauseOnHover: false, // Do not pause scrolling when hovering over the carousel
-                        pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
-                        rewind: true, // Rewind to start when the end is reached
-                        speed: 1 // Scrolling speed
+                        pauseOnHover: false,
+                        pauseOnFocus: false,
+                        rewind: true,
+                        speed: 1,
                     },
-                    arrows: true, // Hide navigation arrows
-                    pagination: false, // Hide pagination dots
-                    fixedWidth: '445px', // Fixed width for each slide
-                    gap: '12px', // Gap between slides
+                    arrows: true,
+                    pagination: false,
+                    fixedWidth: '600px', 
+                    gap: '16px', 
                     breakpoints: {
                         640: {
-                            fixedWidth: '300px', // Smaller width for small screens
-                            gap: '8px', // Smaller gap on small screens
+                            fixedWidth: '350px', 
+                            gap: '12px',
                         },
                         768: {
-                            fixedWidth: '350px', // Medium width for tablets
+                            fixedWidth: '450px', 
                         },
                         1024: {
-                            fixedWidth: '445px', // Default width for larger screens
-                        }
-                    }
+                            fixedWidth: '600px', 
+                        },
+                    },
                 }}
-                extensions={{ AutoScroll }} // Use the AutoScroll extension
+                extensions={{ AutoScroll }}
             >
                 <SplideSlide>
-                    <img src={img1} alt="Poster Brooklyn" className="w-full h-auto" />
+                    <img src={img1} alt="Gallery Image 1" className="w-full h-auto rounded-lg" />
                 </SplideSlide>
                 <SplideSlide>
-                    <img src={img2} alt="Poster Brooklyn" className="w-full h-auto" />
+                    <img src={img2} alt="Gallery Image 2" className="w-full h-auto rounded-lg" />
                 </SplideSlide>
                 <SplideSlide>
-                    <img src={img3} alt="Poster Brooklyn" className="w-full h-auto" />
+                    <img src={img3} alt="Gallery Image 3" className="w-full h-auto rounded-lg" />
                 </SplideSlide>
             </Splide>
         </section>

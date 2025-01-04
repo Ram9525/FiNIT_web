@@ -1,32 +1,33 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import nav_logo from '../../assets/nav_logo.jpg';
 import FiNIT_Logo from '../../assets/FiNIT_Logo.jpg';
 import './Header.css';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 
+
 function Header() {
-  // State to toggle mobile menu
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Function to toggle menu state
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   useGSAP(() => {
-    // GSAP Scroll Effect
+    
     gsap.to('nav', {
       backgroundImage: 'linear-gradient(135deg, rgba(0, 128, 128, 0.8), rgba(128, 0, 128, 0.8))',
       duration: 0.5,
       scrollTrigger: {
         trigger: 'body',
-        start: 'top+=400', // Halfway down
-        toggleActions: 'play none none reverse', // Smooth toggle
+        start: 'top+=400', 
+        toggleActions: 'play none none reverse', 
         markkers: true
       },
     });
   }, []);
 
-  // Navigation links
+
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
@@ -37,12 +38,12 @@ function Header() {
   return (
     <header className="fixed z-50 top-4 w-full lg:px-12">
       <nav className="shadow bg-transparent rounded-2xl border-gray-200 px-4 lg:px-6 py-2.5">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <div style={{fontFamily:'fh2'}} className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src={FiNIT_Logo}
-              className="object-cover h-12 border border-white"
+              src={nav_logo}
+              className="object-cover h-14 border border-[#00FFCC] rounded-full"
               alt="Logo"
             />
           </Link>
@@ -92,6 +93,7 @@ function Header() {
               {navLinks.map(({ to, label }) => (
                 <li key={to}>
                   <NavLink
+                    
                     to={to}
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 ${
@@ -99,6 +101,7 @@ function Header() {
                       } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-purple-600 lg:p-0`
                     }
                     onClick={toggleMenu}
+                    
                   >
                     {label}
                   </NavLink>

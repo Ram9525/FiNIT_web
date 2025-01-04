@@ -94,13 +94,13 @@ function Hero() {
             hopal
           </p>
 
-          <span className="h1 text-white text-[18px] md:text-[22px] lg:text-[26px] font-bold inline-block">
+          <span style={{fontFamily:'fh2'}} className="h1 text-white text-[18px] md:text-[22px] lg:text-[26px] font-bold inline-block">
             where innovation meets <span className="highlight" style={{color:"#874cff"}}>financial literacy</span>.
           </span>
         </div>
 
         {/* Hero Image */}
-        <div className="hero-image relative z-10 mt-8 lg:mt-0 magnet">
+        <div className="hero-image relative z-10 mt-8 lg:mt-0 magnet ">
           <img
             className="w-[250px] md:w-[350px] lg:w-[500px] animate-[beat_5s_ease-in-out_0.2s_infinite_alternate]"
             src={Hero_img}

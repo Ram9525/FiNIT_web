@@ -47,9 +47,22 @@ const Team = () => {
     );
   }, []);
 
+  useEffect(() => {
+    gsap.fromTo(
+      ".team-heading",
+      { y: -50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+      }
+    );
+  }, []);
+
   return (
     <div className="team-container">
-      <h1 className="team-heading">MEET OUR TEAM</h1>
+      <h1 style={{ fontFamily: 'fh1', wordSpacing: '5px' }} className="team-heading">Meet Our Team</h1>
       <div className="team-grid">
         {teamMembers.map((member, index) => (
           <div
@@ -61,8 +74,8 @@ const Team = () => {
             <div className="circle">
               <img src={member.photo} alt={member.name} className="team-photo" />
             </div>
-            <h2 className="team-name">{member.name}</h2>
-            <p className="team-position">{member.position}</p>
+            <h2 style={{ fontFamily: 'fh1' }} className="team-name">{member.name}</h2>
+            <p style={{ fontFamily: 'fh2' }} className="team-position">{member.position}</p>
           </div>
         ))}
       </div>

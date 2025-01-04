@@ -36,7 +36,7 @@ const Events = () => {
 
   return (
     <div className=" mx-auto py-28 px-4 sm:px-6 lg:px-8 container-events">
-      <h2 className="text-5xl font-bold text-center mb-36 text-teal-500">
+      <h2 style={{fontFamily:'fh1'}} className="text-5xl font-bold text-center mb-36 text-teal-500">
         Upcoming Events
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 gap-y-20 place-items-center">
