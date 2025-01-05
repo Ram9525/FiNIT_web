@@ -9,7 +9,7 @@ const Home_Layout = () => {
     <>
     <Hero/>
     <About/>
-    <Events/>
+    <Events isHomePage={true}/>
     <Gallery/>
     <Forms/>
     </>
