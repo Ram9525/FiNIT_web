@@ -1,34 +1,45 @@
 import React from 'react';
-
-// Import icons from react-icons (install with `npm install react-icons`)
+import { Link } from 'react-router-dom'; // Import Link for routing
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
-
-// Import the logo from assets
 import logo from '../../assets/FiNIT_Logo.jpg';
+
+// Data for links, social media, and contact
+const socialMediaLinks = [
+  { icon: <FaFacebookF size={24} />, url: "#" },
+  { icon: <FaTwitter size={24} />, url: "#" },
+  { icon: <FaLinkedinIn size={24} />, url: "#" },
+  { icon: <FaInstagram size={24} />, url: "https://www.instagram.com/finit_nitb/" },
+];
+
+const navigationLinks = [
+  { name: "Home", to: "" },
+  { name: "About", to: "about" },
+  { name: "Events", to: "events" },
+  { name: "Blog", to: "blog" },
+  { name: "Contact Us", to: "contact" },
+];
+
+const contactInfo = [
+  { name: "Ram Kumar", phone: "+91 12345 67890" },
+  { name: "Harish Kushwaha", phone: "+91 98765 43210" },
+];
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-black to-purple-700 text-white py-12">
       <div className="container mx-auto px-6">
-        <div style={{fontFamily:'fh2'}} className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div style={{ fontFamily: 'fh2' }} className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Website Logo and Social Media */}
           <div className="flex flex-col items-start">
             <img src={logo} alt="FiNIT Logo" className="h-16 mb-4" />
             <p className="mb-4">FiNIT - The Finance Society</p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-teal-300 transition-transform transform hover:scale-110">
-                <FaFacebookF size={24} />
-              </a>
-              <a href="#" className="hover:text-teal-300 transition-transform transform hover:scale-110">
-                <FaTwitter size={24} />
-              </a>
-              <a href="#" className="hover:text-teal-300 transition-transform transform hover:scale-110">
-                <FaLinkedinIn size={24} />
-              </a>
-              <a href="#" className="hover:text-teal-300 transition-transform transform hover:scale-110">
-                <FaInstagram size={24} />
-              </a>
+              {socialMediaLinks.map((social, index) => (
+                <a key={index} href={social.url} target='_blank' className="hover:text-teal-300 transition-transform transform hover:scale-110">
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -36,11 +47,11 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="hover:text-teal-300">Home</a></li>
-              <li><a href="#about" className="hover:text-teal-300">About Us</a></li>
-              <li><a href="#events" className="hover:text-teal-300">Events</a></li>
-              <li><a href="#blog" className="hover:text-teal-300">Blog</a></li>
-              <li><a href="#contact" className="hover:text-teal-300">Contact Us</a></li>
+              {navigationLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.to} className="hover:text-teal-300">{link.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -48,8 +59,11 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2">
-              <li>Ram Kumar: <a href="tel:+1234567890" className="hover:text-teal-300">+91 12345 67890</a></li>
-              <li>Harish Kushwaha: <a href="tel:+9876543210" className="hover:text-teal-300">+91 98765 43210</a></li>
+              {contactInfo.map((contact, index) => (
+                <li key={index}>
+                  {contact.name}: <a href={`tel:${contact.phone}`} className="hover:text-teal-300">{contact.phone}</a>
+                </li>
+              ))}
             </ul>
           </div>
 

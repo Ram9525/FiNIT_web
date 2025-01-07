@@ -6,6 +6,7 @@ import Team from './pages/Team/Team.jsx'
 import EventDetails from './pages/Events/EventDetails.jsx'
 import About from './pages/About/About.jsx'
 import Events from './pages/Events/Events.jsx'
+import Forms from './pages/Form/Forms.jsx'
 const router= createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<Root_Layout/>}>
@@ -14,6 +15,7 @@ const router= createBrowserRouter(
         <Route path='events' element={<Events isHomePage={false}/>} />
         <Route path='events/:eventId' element={<EventDetails/>}/>
         <Route path='team' element={<Team/>}/>
+        <Route path='contact' element={<Forms/>}/>
       </Route>
     )
   )
