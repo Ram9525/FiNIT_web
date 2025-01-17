@@ -7,7 +7,7 @@ import logo from '../../assets/FiNIT_Logo.jpg';
 const socialMediaLinks = [
   { icon: <FaFacebookF size={24} />, url: "#" },
   { icon: <FaTwitter size={24} />, url: "#" },
-  { icon: <FaLinkedinIn size={24} />, url: "#" },
+  { icon: <FaLinkedinIn size={24} />, url: "https://www.linkedin.com/company/finit-nit-bhopal/posts/?feedView=all" },
   { icon: <FaInstagram size={24} />, url: "https://www.instagram.com/finit_nitb/" },
 ];
 

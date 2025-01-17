@@ -47,6 +47,7 @@ const Events = ({ isHomePage }) => {
 
       tl.to(cardRefs.current, {
         y: -5,              // Move the element 20px up
+        x: 5,               // Move the element 10px to the right
         duration: 1.5,       // Duration for each cycle
         repeat: -1,          // Repeat the animation indefinitely
         yoyo: true,          // Make it move up and down (float)
