@@ -1,41 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './Team.css';
-
-const teamMembers = [
-  {
-    id: 1,
-    name: 'John Doe',
-    position: 'Team Lead',
-    photo: 'https://via.placeholder.com/150',
-  },
-  {
-    id: 2,
-    name: 'Jane Smith',
-    position: 'Frontend Developer',
-    photo: 'https://via.placeholder.com/150',
-  },
-  {
-    id: 3,
-    name: 'Emily Johnson',
-    position: 'Backend Developer',
-    photo: 'https://via.placeholder.com/150',
-  },
-  {
-    id: 4,
-    name: 'Alice Brown',
-    position: 'UI Designer',
-    photo: 'https://via.placeholder.com/150',
-  },
-];
+import { TeamDetails } from '../../Features/TeamSlice';
 
 const Team = () => {
-  const teamRef = useRef([]);
+  const secondYearRef = useRef([]);
+  const thirdYearRef = useRef([]);
 
   useEffect(() => {
-    
     gsap.fromTo(
-      teamRef.current,
+      [...secondYearRef.current, ...thirdYearRef.current], // Use both refs
       { y: 100, opacity: 0 }, 
       {
         y: 0, 
@@ -64,15 +38,34 @@ const Team = () => {
     <div className="team-container">
       <h1 style={{ fontFamily: 'fh1', wordSpacing: '5px' }} className="team-heading">Meet Our Team</h1>
       <div className="team-grid">
-        {teamMembers.map((member, index) => (
+
+        
+        {/* Second Year Members */}
+        {TeamDetails.secondYear.map((member, index) => (
           <div
             key={member.id}
             className="card team-member"
-            ref={(el) => (teamRef.current[index] = el)}
+            ref={(el) => (secondYearRef.current[index] = el)}  // Use separate ref for secondYear
           >
             <div className="overlay"></div>
             <div className="circle">
-              <img src={member.photo} alt={member.name} className="team-photo" />
+              <img src={member.profileImage} alt={member.name} className="team-photo" />
+            </div>
+            <h2 style={{ fontFamily: 'fh1' }} className="team-name">{member.name}</h2>
+            <p style={{ fontFamily: 'fh2' }} className="team-position">{member.position}</p>
+          </div>
+        ))}
+
+        {/* Third Year Members */}
+        {TeamDetails.thirdYear.map((member, index) => (
+          <div
+            key={member.id}
+            className="card team-member"
+            ref={(el) => (thirdYearRef.current[index] = el)}  // Use separate ref for thirdYear
+          >
+            <div className="overlay"></div>
+            <div className="circle">
+              <img src={member.profileImage} alt={member.name} className="team-photo" />
             </div>
             <h2 style={{ fontFamily: 'fh1' }} className="team-name">{member.name}</h2>
             <p style={{ fontFamily: 'fh2' }} className="team-position">{member.position}</p>
