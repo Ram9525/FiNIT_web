@@ -27,7 +27,9 @@ const Events = ({ isHomePage }) => {
       tl.from(cardRefs.current[0], { xPercent: -100, opacity: 0, ease: 'power2.out' })
         .from(cardRefs.current[1], { xPercent: -100, opacity: 0, ease: 'power2.out' })
         .from(cardRefs.current[2], { yPercent: 100, opacity: 0, ease: 'power2.out' })
-        .from(cardRefs.current[3], { yPercent: -100, opacity: 0, ease: 'power2.out' });
+        .from(cardRefs.current[3], { yPercent: -100, opacity: 0, ease: 'power2.out' })
+        .from(cardRefs.current[4], { yPercent: -100, opacity: 0, ease: 'power2.out' })
+        .from(cardRefs.current[5], { yPercent: -100, opacity: 0, ease: 'power2.out' })
     }
 
     else {

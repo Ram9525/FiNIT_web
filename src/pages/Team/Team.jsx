@@ -9,7 +9,7 @@ const Team = () => {
 
   useEffect(() => {
     gsap.fromTo(
-      [...secondYearRef.current, ...thirdYearRef.current], // Use both refs
+      [secondYearRef.current, thirdYearRef.current], // Use both refs
       { y: 100, opacity: 0 }, 
       {
         y: 0, 
