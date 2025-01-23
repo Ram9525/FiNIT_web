@@ -12,7 +12,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/ram-kumar999",
       email: "ramkumar18092005@gmail.com",
       instagram: "https://www.instagram.com/Ram_kumar_9525",
-      profileImage: "https://drive.google.com/open?id=1byfQZad1OO5FLPlxMfq5dfv-vLk",
+      profileImage: "", 
     },
     {
       id: uuidv4(),
@@ -42,7 +42,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/Vaibhav Mandwar",
       email: "vaibhavmb97@gmail.com",
       instagram: "https://www.instagram.com/waybhav_07",
-      profileImage: "https://drive.google.com/open?id=1uGzrhkGM0OUG",
+      profileImage: "",
     },
     {
       id: uuidv4(),
@@ -52,7 +52,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/nikhil-solanki-a7a",
       email: "nikhilsolanki2306@gmail.com",
       instagram: "https://www.instagram.com/_n_i_k_k_23/profilec",
-      profileImage: "https://drive.google.com/open?id=1wLDoRvUsjTIK",
+      profileImage: "",
     },
   ],
   thirdYear: [
@@ -64,7 +64,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/karan-choudhary-8b",
       email: "krnchdryoo7@gmail.com",
       instagram: "https://www.instagram.com/aisenh_037/",
-      profileImage: "https://drive.google.com/open?id=1gCcXASKZxFJD",
+      profileImage: "",
     },
     {
       id: uuidv4(),
@@ -84,7 +84,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/ayush-gautam-15731",
       email: "ayushgautam5v@gmail.com",
       instagram: "https://www.instagram.com/",
-      profileImage: "https://drive.google.com/open?id=16S0lr5weHiiH",
+      profileImage: "",
     },
     {
       id: uuidv4(),
@@ -94,7 +94,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/",
       email: "armanpal272005@gmail.com",
       instagram: "https://www.instagram.com/",
-      profileImage: "https://drive.google.com/open?id=1BjdW8r6Hp_AU",
+      profileImage: "",
     },
     {
       id: uuidv4(),
@@ -104,7 +104,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/shriyansh-chourasiya",
       email: "shriyanshchourasiya96@gmail.com",
       instagram: "https://www.instagram.com/ll_mr.unpredictable_",
-      profileImage: "https://drive.google.com/open?id=1ihXjxLusyyLP",
+      profileImage: "",
     },
   ],
 };
