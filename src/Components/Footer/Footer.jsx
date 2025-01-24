@@ -20,8 +20,8 @@ const navigationLinks = [
 ];
 
 const contactInfo = [
-  { name: "Ram Kumar", phone: "+91 12345 67890" },
-  { name: "Harish Kushwaha", phone: "+91 98765 43210" },
+  { name: "Shriyansh Chourasiya", phone: "+91 12345 67890" },
+  { name: "Ayush Gautam", phone: "+91 98765 43210" },
 ];
 
 const Footer = () => {
