@@ -1,42 +1,65 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import "./Team.css";
-import { TeamDetails } from "../../Features/TeamSlice";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram , FaEnvelope } from 'react-icons/fa';
+
+import React, { useRef, useEffect } from 'react';
+import './Team.css';
+import { TeamDetails } from '../../Features/TeamSlice';
+import { FaLinkedin, FaInstagram } from 'react-icons/fa';  
+import gsap from 'gsap';
+
 
 const Team = () => {
+  const headingRef = useRef(null);
   const secondYearRef = useRef([]);
   const thirdYearRef = useRef([]);
+  const thirdYearHeadingRef = useRef(null);
+  const secondYearHeadingRef = useRef(null);
 
   useEffect(() => {
+    // Animation for the main heading
     gsap.fromTo(
-      [thirdYearRef.current, secondYearRef.current], // Use both refs
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power2.out",
-      }
-    );
-  }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      ".team-heading",
-      { y: -50, opacity: 0 },
+      headingRef.current,
+      { opacity: 0, y: -50 },
       {
-        y: 0,
         opacity: 1,
-        duration: 1,
-        ease: "power2.out",
+        y: 0,
+        duration: 1.5,
+        ease: 'power3.out',
+
       }
     );
+    // Animation for the third-year heading
+    gsap.fromTo(
+    thirdYearHeadingRef.current,
+    { opacity: 0, y: -50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      ease: 'power3.out',
+    }
+  );
+
+    // Animation for third-year members
+    thirdYearRef.current.forEach((el) => {
+      if (el) {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            ease: 'power3.out',
+            stagger:1
+          }
+        );
+      }
+    });
   }, []);
 
   return (
     <div className="team-container">
+
       <h1
         style={{ fontFamily: "fh1", wordSpacing: "5px" }}
         className="team-heading"

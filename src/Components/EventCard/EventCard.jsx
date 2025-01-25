@@ -31,7 +31,10 @@ const EventCard = ({ id, title, poweredBy, image, description }) => {
 </p>
           <Link to={`/events/${id}`}>
           <button className="mt-4 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-teal-500 transition-all"
-          onClick={()=>dispatch(selectEvent(id))} >
+          onClick={() => {
+          dispatch(selectEvent(id));
+          window.scrollTo(0, 0);
+          }} >
             Know more
           </button>
             </Link>

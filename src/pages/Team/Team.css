@@ -1,5 +1,3 @@
-
-
 .team-container {
   text-align: center;
   padding: 2rem;
@@ -35,8 +33,7 @@
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease-out;
   text-decoration: none;
-  opacity: 0; 
-  transform: translateY(100px);
+  /* transform: translateY(100px); */
 }
 
 .card:hover {
@@ -121,4 +118,41 @@
 .team-position {
   font-size: 1rem;
   color: #666;
+}
+
+
+.social-icons {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 5;
+  display: flex; 
+  gap: 15px;
+}
+
+
+.card:hover .social-icons {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.social-icons a {
+  color: #000;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* LinkedIn hover effect */
+.social-icons a:nth-child(1):hover {
+  color: #0077b5;  /* LinkedIn color */
+}
+
+/* Instagram hover effect */
+.social-icons a:nth-child(2):hover {
+  color: #e4405f;  /* Instagram color */
 }
