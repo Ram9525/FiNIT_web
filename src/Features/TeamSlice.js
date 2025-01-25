@@ -216,7 +216,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/shriyansh-chourasiya",
       email: "shriyanshchourasiya96@gmail.com",
       instagram: "https://www.instagram.com/ll_mr.unpredictable_",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660481/Taj_photo_-_Shriyansh_Chourasiya_fm8e2a.jpg",
     },
     {
       id: uuidv4(),
@@ -266,7 +266,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/dileep-bhargav89/",
       email: "dileepbhargav722@gmail.com",
       instagram: "https://www.instagram.com/dileepbz._/profilecard/?igsh=Ync2eDB4bXBxeTJ2",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660481/WhatsApp_Image_2025-01-22_at_14.26.12_2400b348_-_Dileep_Bhargav_xh3z86.jpg",
     },
     {
       id: uuidv4(),
@@ -276,7 +276,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/varun-jain08",
       email: "varunvj8804@gmail.com",
       instagram: "https://www.instagram.com/varun.8_8",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660479/IMG_20240330_225228_-_Varun_Jain_ktcvp2.jpg",
     },
     {
       id: uuidv4(),
@@ -286,17 +286,17 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/shreyas-raut-643a9a256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       email: "shreyas.raut04@gmail.com",
       instagram: "https://www.instagram.com/shreyasraut99?igsh=MWN4N3NqdWY3ZXdkNA==",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660479/IMG_20240402_094341_-_Shreyas_Raut_ybieca.jpg",
     },
     {
       id: uuidv4(),
       name: "Vedant Kumar Namdev",
       year: "3rd Year",
       role: "Content and Designing Head",
-      linkedIn: "https://www.linkedin.com/in/vedant-kumar-namdev-31228a257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      linkedIn: "https://www.linkedin.com/in/vedant-kumar-namdev-31228a257",
       email: "",
       instagram: "https://www.instagram.com/vedantknamdev?utm_source=qr&igsh=MWNoNGtoMGwyN3c2Zg==",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660479/Clipped_image_20241201_232458_-_Vedant_Namdev_rvgmma.png",
 
     },
   ],

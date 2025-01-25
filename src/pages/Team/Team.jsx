@@ -68,8 +68,8 @@ const Team = () => {
               className="card team-member"
               ref={(el) => (thirdYearRef.current[index] = el)}
             >
-              <div className="overlay"></div>
-              <div className="circle">
+              <div className="overlay"></div> 
+              <div className="circle">  	  
                 <img src={member.profileImage} alt={member.name} className="team-photo" />
               </div>
               <h2 style={{ fontFamily: 'fh1' }} className="team-name">{member.name}</h2>
