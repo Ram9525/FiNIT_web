@@ -19,7 +19,7 @@ const Events = ({ isHomePage }) => {
           trigger: '.container-events',
           start: window.innerWidth >= 1280 ? 'top top' : '+=300 top',
           end: 'bottom',
-          // scrub: 3,
+          scrub: 3,
           pin: true,
         },
       });
