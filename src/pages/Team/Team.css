@@ -33,7 +33,6 @@
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease-out;
   text-decoration: none;
-  /* transform: translateY(100px); */
 }
 
 .card:hover {
@@ -147,12 +146,10 @@
   transition: color 0.3s ease;
 }
 
-/* LinkedIn hover effect */
 .social-icons a:nth-child(1):hover {
-  color: #0077b5;  /* LinkedIn color */
+  color: #0077b5;  
 }
 
-/* Instagram hover effect */
 .social-icons a:nth-child(2):hover {
-  color: #e4405f;  /* Instagram color */
+  color: #e4405f; 
 }
