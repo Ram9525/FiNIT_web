@@ -210,6 +210,16 @@ export const TeamDetails = {
   thirdYear: [
     {
       id: uuidv4(),
+      name: "Ayush Gautam",
+      year: "3rd Year",
+      role: "Coordinator",
+      linkedIn: "https://www.linkedin.com/in/ayush-gautam-15731",
+      email: "ayushgautam5v@gmail.com",
+      instagram: "https://www.instagram.com/",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660478/IMG-20241213-WA0007_-_Ayush_Gautam_na9nuf.jpg",
+    },
+    {
+      id: uuidv4(),
       name: "Shriyansh Chourasiya",
       year: "3rd Year",
       role: "Co-coordinator (Admin)",
@@ -237,16 +247,6 @@ export const TeamDetails = {
       email: "rishabh558patel@gmail.com",
       instagram: "https://www.instagram.com/risheclipse",
       profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660479/IMG_20241122_190630_263_-_Rishabh_patel_zzvrnm.webp",
-    },
-    {
-      id: uuidv4(),
-      name: "Ayush Gautam",
-      year: "3rd Year",
-      role: "Cordinator",
-      linkedIn: "https://www.linkedin.com/in/ayush-gautam-15731",
-      email: "ayushgautam5v@gmail.com",
-      instagram: "https://www.instagram.com/",
-      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660478/IMG-20241213-WA0007_-_Ayush_Gautam_na9nuf.jpg",
     },
     {
       id: uuidv4(),
