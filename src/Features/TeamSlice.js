@@ -104,7 +104,7 @@ export const TeamDetails = {
 
 
 
-// spon
+// sponsorship
     {
       id: uuidv4(),
       name: "Anupam Kumar Tiwari",
