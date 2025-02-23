@@ -35,16 +35,7 @@ export const TeamDetails = {
       instagram: "https://www.instagram.com/piyush_yadav2307",
       profileImage: "",
     },
-    // {
-    //   id: uuidv4(),
-    //   name: "",
-    //   year: "2nd Year",
-    //   role: "Event Manager",
-    //   linkedIn: "",
-    //   email: "",
-    //   instagram: "",
-    //   profileImage: "",
-    // },
+    
     {
       id: uuidv4(),
       name: "Rohan Kumar",
@@ -98,16 +89,7 @@ export const TeamDetails = {
       instagram: "https://www.instagram.com/anujgour_27/profilec",
       profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660122/pixelcut-export_-_Anuj_Gour_ovbibc.png",
     },
-    {
-      id: uuidv4(),
-      name: "Prakhar Dubey",
-      year: "2nd Year",
-      role: "FinTech",
-      linkedIn: "https://www.linkedin.com/in/prakhardubey110",
-      email: "prakhardubey110@gmail.com",
-      instagram: "https://www.instagram.com/prakhar_110",
-      profileImage: "",
-    },
+
     //fin
     {
       id: uuidv4(),
@@ -119,16 +101,7 @@ export const TeamDetails = {
       instagram: "https://www.instagram.com/prakhar_110",
       profileImage: "",
     },
-    {
-      id: uuidv4(),
-      name: "Prakhar Dubey",
-      year: "2nd Year",
-      role: "FinTech",
-      linkedIn: "https://www.linkedin.com/in/prakhardubey110",
-      email: "prakhardubey110@gmail.com",
-      instagram: "https://www.instagram.com/prakhar_110",
-      profileImage: "",
-    },
+
 
 
 // spon
@@ -233,10 +206,10 @@ export const TeamDetails = {
       name: "KARAN CHOUDHARY",
       year: "3rd Year",
       role: "Co-Coordinator(Management)",
-      linkedIn: "https://www.linkedin.com/in/karan-choudhary-8b",
+      linkedIn: "https://www.linkedin.com/in/karan-choudhary-8b62a6216",
       email: "krnchdryoo7@gmail.com",
       instagram: "https://www.instagram.com/aisenh_037/",
-      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660480/IMG_20250102_205416_-_KARAN_CHOUDHARY_xupxlb.jpg",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1739281135/Karan_FiNIT_lkotka.jpg",
     },
     {
       id: uuidv4(),
@@ -253,10 +226,10 @@ export const TeamDetails = {
       name: "Arman Pal",
       year: "3rd Year",
       role: "Web Development Head",
-      linkedIn: "https://www.linkedin.com/in/",
+      linkedIn: "https://www.linkedin.com/in/arman-pal-867871252",
       email: "armanpal272005@gmail.com",
       instagram: "https://www.instagram.com/",
-      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660479/20241101_145822_resized_-_Arman_pal_frkjqd.jpg",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1739279606/Armaan_sir_FiNIT_bbss9i.jpg",
     },
     {
       id: uuidv4(),

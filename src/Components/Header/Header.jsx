@@ -115,7 +115,7 @@ function Header() {
           </div>
 
           {/* Buttons */}
-          <div className="flex items-center lg:order-2">
+          <div className="items-center lg:order-2 hidden">
             <Link
               to="#"
               className="text-white hover:bg-gray-500 focus:ring-1 focus:ring-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"

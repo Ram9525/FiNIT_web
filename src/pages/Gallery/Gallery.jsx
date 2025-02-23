@@ -5,6 +5,7 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import img1 from '../../assets/Gallery_1.jpg';
 import img2 from '../../assets/Gallery_2.jpg';
 import img3 from '../../assets/Gallery_3.jpg';
+import img4 from '../../assets/Gallery_4.jpg';
 
 function CarouselGames() {
     return (
@@ -42,13 +43,16 @@ function CarouselGames() {
                 extensions={{ AutoScroll }}
             >
                 <SplideSlide>
-                    <img src={img1} alt="Gallery Image 1" className="w-full h-auto rounded-lg" />
+                    <img src={img1} alt="Gallery Image 1" className="w-full h-full rounded-lg" />
                 </SplideSlide>
                 <SplideSlide>
-                    <img src={img2} alt="Gallery Image 2" className="w-full h-auto rounded-lg" />
+                    <img src={img2} alt="Gallery Image 2" className="w-full h-full rounded-lg" />
                 </SplideSlide>
                 <SplideSlide>
-                    <img src={img3} alt="Gallery Image 3" className="w-full h-auto rounded-lg" />
+                    <img src={img3} alt="Gallery Image 3" className="w-full h-full rounded-lg" />
+                </SplideSlide>
+                <SplideSlide>
+                    <img src={img4} alt="Gallery Image 3" className="w-full h-full rounded-lg" />
                 </SplideSlide>
             </Splide>
         </section>

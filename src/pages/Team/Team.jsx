@@ -59,8 +59,8 @@ const Team = () => {
       <h1 ref={headingRef} className="team-heading">Meet Our Team</h1>
 
       {/* Third Year Section (Placed Above Second Year) */}
-      <section className="third-year-section">
-        <h1 ref={thirdYearHeadingRef} className="section-heading text-4xl text-[#C084FC] font-bold underline">Third Year</h1>
+      <section className="third-year-section py-20">
+        <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 shadow text-purple-700 font-bold">Third Year</h1>
         <div className="team-grid mt-6">
           {TeamDetails.thirdYear.map((member, index) => (
             <div
@@ -86,7 +86,7 @@ const Team = () => {
       </section>
 
       {/* Second Year Section */}
-      <section className="second-year-section">
+      <section className="second-year-section py-40">
         <h1 ref={secondYearHeadingRef} className="section-heading text-4xl mt-6 text-[#C084FC] font-bold underline">Second Year</h1>
         <div className="team-grid mt-6">
           {TeamDetails.secondYear.map((member, index) => (
